@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="slid.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="./style.css">
+      <script>
+        $(document).ready(function() {
+            $('#goods-count').empty().append(goodsCount);
+            $('#knapsack-volume').empty().append(knapsackVolume);
+            createTable(goodsCount +1, knapsackVolume +1)
+        });
+      </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>JavaTalks: Resolving Algorithm</h1>
+        </div>
+        <div class="problem">
+            <div>
+                Goods count: <span id="goods-count"></span>
+            </div>
+            <div>
+                Knapsack volume: <span id="knapsack-volume"></span>  Kilograms
+            </div>
+        </div>
+        <div class="body">
+            <table id="table"></table>
+        </div>
+        <div class="formula">
+            <div>(row, col)</div>
+            <div>( <span id="i-value"></span>, <span id="j-value"></span> )</div>
+        </div>
+        <div class="actions">
+            <button onClick="previous()">Previous</button>
+            <button onClick="next()">Next</button>
+        </div>
+    </body>
+</html>
