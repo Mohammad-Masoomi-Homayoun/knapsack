@@ -4,7 +4,8 @@
 }
 
 .header {
-    background-color: green;
+    background-color: rgba(254, 250, 3, 0.84);
+    text-align: center;
 }
 
 .problem {
