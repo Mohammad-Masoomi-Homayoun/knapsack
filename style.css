@@ -41,5 +41,29 @@
 
 .cursor {
     /* background-color: yellow; */
-    border: 2px solid blue !important;
+    border: 2px solid yellow !important;
+}
+
+.bold {
+    font-size: 26px;
+    font-weight: 150;
+}
+
+.context {
+    background: rgba(83, 252, 83, 0.2);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.objects-table {
+    border: 1px dashed black;
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.button {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
 }

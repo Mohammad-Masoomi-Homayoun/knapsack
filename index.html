@@ -8,6 +8,8 @@
         $(document).ready(function() {
             $('#goods-count').empty().append(goodsCount);
             $('#knapsack-volume').empty().append(knapsackVolume);
+            $('#weight-array').empty().append(weightArray.join(', '))
+            $('#profit-array').empty().append(profitArray.join(', '))
             createTable(goodsCount +1, knapsackVolume +1)
         });
       </script>
@@ -23,17 +25,54 @@
             <div>
                 Knapsack volume: <span id="knapsack-volume"></span>  Kilograms
             </div>
+            <div>
+                <table>
+                    <tr>
+                        <td class="objects-table">Objects</td>
+                        <td class="objects-table obj1">Vase</td>
+                        <td class="objects-table obj2">Watermelon</td>
+                        <td class="objects-table obj3">Chair</td>
+                        <td class="objects-table obj4">Monitor</td>
+                    </tr>
+                    <tr>
+                        <td class="objects-table">Weight</td>
+                        <td class="objects-table obj1" id="">2</td>
+                        <td class="objects-table obj2" id="">3</td>
+                        <td class="objects-table obj3" id="">4</td>
+                        <td class="objects-table obj4" id="">5</td>
+                    </tr>
+                    <tr>
+                        <td class="objects-table">Profit</td>
+                        <td class="objects-table obj1" id="">1</td>
+                        <td class="objects-table obj2" id="">2</td>
+                        <td class="objects-table obj3" id="">5</td>
+                        <td class="objects-table obj4" id="">6</td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <div class="body">
             <table id="table"></table>
         </div>
         <div class="formula">
+            <div class="text">
+                <span>V[i, j] = <span class="bold">max {</span>V[i-1,j], V[i-1, j- Weight[i]] + Porfit[i]<span class="bold">}</span></span>
+            </div>
+            <div class="variables">
+                <div>V[<span class="i-value-minus"></span>, <span class="j-value"></span>] = <span id="VI-1J"></span></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="real">
+                <span>V[<span class="i-value">1</span>, <span class="j-value">1</span>] = <span class="bold">max {</span>V[<span class="i-value">1</span>-1,<span class="j-value">1</span>], V[<span class="i-value">1</span>-1, <span class="j-value">1</span>- Weight[<span class="i-value">1</span>]] + Porfit[<span class="i-value">1</span>]<span class="bold">}</span></span>
+            </div>
             <div>(row, col)</div>
-            <div>( <span id="i-value"></span>, <span id="j-value"></span> )</div>
+            <div>( <span class="i-value">1</span>, <span class="j-value">1</span> )</div>
         </div>
         <div class="actions">
-            <button onClick="previous()">Previous</button>
-            <button onClick="next()">Next</button>
+            <button onClick="previous()" class="button">Previous</button>
+            <button onClick="next()" class="button">Next</button>
         </div>
     </body>
 </html>
